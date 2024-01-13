@@ -4,7 +4,7 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = process.env.PORT || 1998;
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 
@@ -26,6 +26,6 @@ app.get('/api/data/:query', async (req, res) => {
       }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
